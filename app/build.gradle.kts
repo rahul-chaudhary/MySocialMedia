@@ -49,6 +49,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     //Coroutines dependency
     implementation(libs.kotlinx.coroutines.android)
+    //glide dependency
+    implementation (libs.glide)
 
 
 }
