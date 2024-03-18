@@ -3,6 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/signInBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        />
 
 
 </LinearLayout>
