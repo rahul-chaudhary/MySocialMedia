@@ -1,4 +1,7 @@
 package com.example.mysocialmedia.models
 
-class User {
-}
+data class User(
+    val uid: String = "",
+    val displayName: String? = "",
+     val imageURL: String = ""
+)
