@@ -31,7 +31,7 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mbinding = ActivitySignInBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_sign_in)
+        setContentView(mbinding.root)
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(GlobalVars.idToken)
