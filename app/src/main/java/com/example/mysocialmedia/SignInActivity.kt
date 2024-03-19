@@ -34,7 +34,7 @@ class SignInActivity : AppCompatActivity() {
         setContentView(mbinding.root)
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(GlobalVars.idToken)
+            .requestIdToken(GlobalVars.CLIENT_ID)
             .requestEmail()
             .build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)
@@ -70,10 +70,10 @@ class SignInActivity : AppCompatActivity() {
     private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
         try {
             val account = completedTask.getResult(ApiException::class.java)!!
-            Log.d("SignInActivity", "firebaseAuthWithGoogle:" + account.id)
+            Log.d("Response log", "firebaseAuthWithGoogle:" + account.id)
             firebaseAuthWithGoogle(account.idToken!!)
         } catch (e: ApiException) {
-            Log.w("SignInActivity", "signInResult:failed code=" + e.statusCode)
+            Log.w("Response log", "signInResult:failed code=" + e.statusCode)
         }
     }
 
