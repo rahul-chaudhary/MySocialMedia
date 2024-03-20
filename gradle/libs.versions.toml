@@ -1,6 +1,7 @@
 [versions]
 agp = "8.3.0"
 firebaseBom = "32.7.4"
+firebaseUiFirestore = "7.2.0"
 glide = "4.16.0"
 kotlin = "1.9.0"
 coreKtx = "1.12.0"
@@ -19,6 +20,7 @@ playServicesAuth = "21.0.0"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-ui-firestore = { module = "com.firebaseui:firebase-ui-firestore", version.ref = "firebaseUiFirestore" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

@@ -55,7 +55,7 @@ dependencies {
     //Coroutines dependency
     implementation(libs.kotlinx.coroutines.android)
     //glide dependency
-    implementation (libs.glide)
+    implementation(libs.glide)
 
     //firebase dependencies
     //BoM for the Firebase platform
@@ -64,10 +64,10 @@ dependencies {
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-analytics")
-//    implementation(libs.firebase.auth)
+    //implementation(libs.firebase.auth)
     // dependency for the Google Play services library and specify its version
     implementation(libs.play.services.auth)
-
-
+    // Firebase UI Firestore
+    implementation (libs.firebase.ui.firestore)
 
 }
