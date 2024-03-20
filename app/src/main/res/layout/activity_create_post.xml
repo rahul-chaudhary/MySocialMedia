@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:height="200dp"
         android:layout_margin="12dp"
+        android:padding="12dp"
         android:gravity="top"
         android:hint="@string/what_you_want_to_talk_about"
         android:background="@drawable/edittext_round_shape"
