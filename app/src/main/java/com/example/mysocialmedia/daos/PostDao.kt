@@ -12,7 +12,7 @@ import kotlinx.coroutines.tasks.await
 
 class PostDao {
     private val db = FirebaseFirestore.getInstance()
-    private val postCollections = db.collection("posts")
+    val postCollections = db.collection("posts")
     private val auth = Firebase.auth
 
     @OptIn(DelicateCoroutinesApi::class)
