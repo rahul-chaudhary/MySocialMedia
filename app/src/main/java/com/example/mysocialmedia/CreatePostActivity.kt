@@ -15,5 +15,13 @@ class CreatePostActivity : AppCompatActivity() {
         mbinding = ActivityCreatePostBinding.inflate(layoutInflater)
         setContentView(mbinding.root)
 
+        mbinding.postbtn.setOnClickListener {
+            val input = mbinding.postInput.text.toString().trim()
+            if(input.isNotEmpty()) {
+
+            }
+        }
+
+
     }
 }
