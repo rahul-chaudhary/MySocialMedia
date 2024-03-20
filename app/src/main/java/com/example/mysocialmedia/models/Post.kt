@@ -1,3 +1,8 @@
 package com.example.mysocialmedia.models
 
-data class Post()
+data class Post(
+    val text: String = "",
+    val createdBy: User = User(),
+    val createdAt: Long = 0L,
+    val likedBy: ArrayList<String> = ArrayList()
+)
