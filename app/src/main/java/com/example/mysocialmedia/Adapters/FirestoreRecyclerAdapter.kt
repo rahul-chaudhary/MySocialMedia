@@ -1,5 +1,6 @@
 package com.example.mysocialmedia.Adapters
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -22,7 +23,13 @@ class PostAdapter(options: FirestoreRecyclerOptions<Post>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
-        TODO("Not yet implemented")
+        return PostViewHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.item_post,
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(p0: PostViewHolder, p1: Int, p2: Post) {
