@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         mbinding.fab.setOnClickListener {
             val intent = Intent(this@MainActivity, CreatePostActivity::class.java)
+            startActivity(intent)
         }
 
 
