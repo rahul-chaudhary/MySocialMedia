@@ -6,7 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.mysocialmedia.R
+import com.example.mysocialmedia.Utils
 import com.example.mysocialmedia.models.Post
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
@@ -32,8 +34,12 @@ class PostAdapter(options: FirestoreRecyclerOptions<Post>) :
         )
     }
 
-    override fun onBindViewHolder(p0: PostViewHolder, p1: Int, p2: Post) {
-        TODO("Not yet implemented")
+    override fun onBindViewHolder(holder: PostViewHolder, position: Int, model: Post) {
+        holder.postText.text = model.text
+        holder.userText.text = model.createdBy.displayName
+        Glide.with(holder.userImage.context).load(model.createdBy.imageURL).circleCrop().into(holder.userImage)
+        holder.likeCount.text = model.likedBy.size.toString()
+        holder.createdAt.text = Utils.getTimeAgo(model.createdAt)
     }
 
 
