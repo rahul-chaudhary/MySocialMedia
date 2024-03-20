@@ -5,7 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreatePostActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".CreatePostActivity">
 
+    <EditText
+        android:id="@+id/postInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="200dp"
+        android:layout_margin="12dp"
+        android:gravity="top"
+        android:hint="@string/what_you_want_to_talk_about" />
+
+    <Button
+        android:id="@+id/postbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_button_shape"
+        android:layout_margin="12dp"
+        android:text="@string/post" />
 </LinearLayout>
