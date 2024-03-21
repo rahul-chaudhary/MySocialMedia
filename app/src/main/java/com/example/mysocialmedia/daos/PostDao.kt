@@ -47,7 +47,7 @@ class PostDao {
             } else {
                 post.likedBy.add(currentUserId)
             }
-            postCollections.document().set(post)
+            postCollections.document(postId).set(post)
 
         }
 
