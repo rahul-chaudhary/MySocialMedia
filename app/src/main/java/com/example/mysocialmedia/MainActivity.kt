@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.mysocialmedia.Adapters.IPostAdapter
 import com.example.mysocialmedia.Adapters.PostAdapter
 import com.example.mysocialmedia.daos.PostDao
 import com.example.mysocialmedia.databinding.ActivityMainBinding
@@ -12,7 +13,7 @@ import com.example.mysocialmedia.models.Post
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.firestore.Query
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), IPostAdapter {
     private lateinit var mbinding: ActivityMainBinding
     private lateinit var adapter: PostAdapter
     private lateinit var postDao: PostDao
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         val recyclerViewOptions =
             FirestoreRecyclerOptions.Builder<Post>().setQuery(query, Post::class.java).build()
 
-        adapter = PostAdapter(recyclerViewOptions)
+        adapter = PostAdapter(recyclerViewOptions, this)
 
         mbinding.recyclerView.adapter = adapter
         mbinding.recyclerView.layoutManager = LinearLayoutManager(this)
@@ -52,6 +53,10 @@ class MainActivity : AppCompatActivity() {
     override fun onStop() {
         super.onStop()
         adapter.stopListening()
+    }
+
+    override fun onLikeClicked(postId: String) {
+        postDao.updateLikes(postId)
     }
 
 
