@@ -1,7 +1,31 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <!-- Base application theme. -->
+
     <style name="Base.Theme.MySocialMedia" parent="Theme.Material3.DayNight.NoActionBar">
+
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <!-- Primary color for the app bar and other UI elements -->
+        <item name="colorPrimary">@color/pink</item>
+
+        <!-- Accent color for widgets and UI controls -->
+        <item name="colorAccent">@color/beige</item>
+
+        <!-- Background color for the app's content area -->
+        <item name="android:windowBackground">@color/black</item>
+
+        <!-- Color of the status bar -->
+        <item name="android:statusBarColor">@color/beige</item>
+
+        <!-- Text color for primary content -->
+        <item name="android:textColorPrimary">@color/white</item>
+
+        <!-- Text color for secondary content -->
+        <item name="android:textColorSecondary">@color/white</item>
+
+        <!-- Customize other attributes as needed -->
+
     </style>
+
 </resources>

@@ -1,9 +1,33 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <!-- Base application theme. -->
+
     <style name="Base.Theme.MySocialMedia" parent="Theme.Material3.DayNight.NoActionBar">
+
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Primary color -->
+        <item name="colorPrimary">@color/pink</item>
+
+        <!-- Accent color -->
+        <item name="colorAccent">@color/beige</item>
+
+        <!-- Background color -->
+        <item name="android:colorBackground">@color/beige</item>
+
+        <!-- Text color -->
+        <item name="android:textColorPrimary">@color/black</item>
+
+        <!-- Status bar color (optional) -->
+        <item name="android:statusBarColor">@color/beige</item>
+
+        <!-- Navigation bar color (optional) -->
+        <item name="android:navigationBarColor">@color/white</item>
+
+        <!-- Other customizations as needed -->
+
     </style>
 
     <style name="Theme.MySocialMedia" parent="Base.Theme.MySocialMedia" />
+
 </resources>
