@@ -4,17 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mysocialmedia.Adapters.PostAdapter
 import com.example.mysocialmedia.daos.PostDao
 import com.example.mysocialmedia.databinding.ActivityMainBinding
-import com.example.mysocialmedia.databinding.ActivitySignInBinding
 import com.example.mysocialmedia.models.Post
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
-import com.google.android.gms.auth.api.identity.BeginSignInRequest
-import com.google.android.gms.auth.api.identity.SignInClient
 import com.google.firebase.firestore.Query
 
 class MainActivity : AppCompatActivity() {
@@ -33,12 +28,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, CreatePostActivity::class.java)
             startActivity(intent)
         }
+        setUpRecyclerView()
     }
 
     private fun setUpRecyclerView() {
         val postsCollections = postDao.postCollections
         val query = postsCollections.orderBy("createdAt", Query.Direction.DESCENDING)
-        val recyclerViewOptions = FirestoreRecyclerOptions.Builder<Post>().setQuery(query, Post::class.java).build()
+        val recyclerViewOptions =
+            FirestoreRecyclerOptions.Builder<Post>().setQuery(query, Post::class.java).build()
 
         adapter = PostAdapter(recyclerViewOptions)
 
@@ -46,4 +43,16 @@ class MainActivity : AppCompatActivity() {
         mbinding.recyclerView.layoutManager = LinearLayoutManager(this)
 
     }
+
+    override fun onStart() {
+        super.onStart()
+        adapter.startListening()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        adapter.stopListening()
+    }
+
+
 }
