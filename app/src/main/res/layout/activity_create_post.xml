@@ -37,6 +37,8 @@
         android:id="@+id/postbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?attr/colorAccent"
         android:background="@drawable/rounded_corner_button_shape"
         android:layout_margin="12dp"
         android:text="@string/post" />
