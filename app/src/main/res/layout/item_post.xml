@@ -58,6 +58,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="16dp"
+            android:src="@drawable/round_thumb_up_off_alt_24"
             app:layout_constraintLeft_toLeftOf="@id/postTitle"
             app:layout_constraintTop_toBottomOf="@id/postTitle"
             android:contentDescription="@string/like_button" />
