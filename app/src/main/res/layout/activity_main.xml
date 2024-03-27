@@ -13,6 +13,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins_bold"
+        android:textColor="?attr/colorAccent"
         android:text="@string/ound_the_world"
         android:textAlignment="center"
         android:textSize="40sp"
@@ -22,6 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_weight="1" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
@@ -30,7 +32,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/headingTitle"
-        app:layout_constraintVertical_weight="9" />
+        app:layout_constraintVertical_weight="9"
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -50,6 +53,7 @@
         android:fontFamily="@font/poppins_thinitalic"
         android:gravity="center"
         android:text="@string/you_ve_reached_the_void"
+        android:textColor="?attr/colorAccent"
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"

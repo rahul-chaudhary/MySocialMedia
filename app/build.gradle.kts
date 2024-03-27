@@ -69,5 +69,7 @@ dependencies {
     implementation(libs.play.services.auth)
     // Firebase UI Firestore
     implementation (libs.firebase.ui.firestore)
+    //Lottie Animation
+    implementation (libs.lottie)
 
 }
